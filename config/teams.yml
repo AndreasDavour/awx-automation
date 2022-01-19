@@ -1,0 +1,8 @@
+---
+controller_teams:
+  - name: "DailyOps"
+    description: "Daily operations"
+    organization: "Operations"
+  - name: "NightOps"
+    description: "Night shift monitoring"
+    organization: "Operations"

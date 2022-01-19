@@ -1,0 +1,23 @@
+---
+controller_user_accounts:
+  - user: bobj
+    password: "bobpassword"
+    first_name: "Bob"
+    last_name: "Johansen"
+    email: bobj@company.com
+    is_superuser: no
+    update_secrets: no
+  - user: samp
+    password: "sampassword"
+    first_name: "Sam"
+    last_name: "Patterson"
+    email: samp@company.com
+    is_superuser: no
+    update_secrets: no        
+  - user: sandraw
+    password: "sandrapassword"
+    first_name: "Sandra"
+    last_name: "Waller"
+    email: sandraw@company.com
+    is_superuser: no
+    update_secrets: no        

@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  collections:
+    - awx.awx
+    - redhat_cop.controller_configuration
+  vars:
+    controller_hostname: http://192.168.0.71:32041
+    controller_username: admin
+    controller_password: "{{ lookup('env', 'TOWER_PW') }}"
+    controller_state: absent
+
+  pre_tasks:
+
+    - name: Include vars from config directory
+      include_vars:
+        dir: "./config"
+        extensions:
+          - "yml"
+    
+  roles:
+    - { role: redhat_cop.controller_configuration.roles, tags: roles }
+    - { role: redhat_cop.controller_configuration.users, tags: users }
+    - { role: redhat_cop.controller_configuration.teams, tags: teams }
+    - { role: redhat_cop.controller_configuration.organizations, tags: org }
+    

@@ -1,0 +1,25 @@
+---
+controller_roles: # i.e. RBAC roles # oddly enough users does not become memebrs of the org the team is member of...
+  - user: samp
+    target_team: "DailyOps"
+    role: member
+  - user: bobj
+    target_team: "DailyOps"
+    role: member
+  - user: sandraw
+    target_team: "NightOps"
+    role: member
+  - team: "DailyOps"
+    target_team: "DailyOps"
+    job_template: "Demo Job Template"
+    role: read
+  - user: samp
+    role: admin
+    job_template: "Demo Job Template"
+  - user: samp
+    role: admin # not project_admin whatever the docs say!
+    project: "Demo Project"
+  - team: "NightOps"
+    target_team: "NightOps"
+    role: read
+    job_template: "Demo Job Template"
